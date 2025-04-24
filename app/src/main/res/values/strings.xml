@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ReciBo</string>
+    <string name="confirm_password">CONFIRMAR CONTRASEÑA</string>
+    <string name="email">EMAIL</string>
+    <string name="user_name">NOMBRE DE USUARIO</string>
+    <string name="password">CONTRASEÑA</string>
+    <string name="btn_register">REGISTRARSE</string>
+    <string name="btn_sign_in">INICIAR SESIÓN</string>
+    <string name="messageAc">Ya tienes una cuenta!!</string>
+    <string name="messageNoAc">¿No tienes cuenta?</string>
+    <string name="btn_qr_scanner">Escanear QR</string>
+
+</resources>
