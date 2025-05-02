@@ -13,7 +13,28 @@
         android:theme="@style/Theme.ReciBo"
         tools:targetApi="31">
         <activity
-            android:name=".QrScanner"
+            android:name=".TipsAndNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChallengesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrScannerActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
@@ -28,12 +49,12 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-        </activity>
-        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:name=".MainMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
-            tools:replace="screenOrientation"/>"
+            tools:replace="screenOrientation" />
     </application>
 
 </manifest>

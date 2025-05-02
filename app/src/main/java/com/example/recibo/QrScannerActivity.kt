@@ -8,12 +8,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.journeyapps.barcodescanner.CaptureActivity
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
 
-class QrScanner : AppCompatActivity() {
+class QrScannerActivity : AppCompatActivity() {
 
     private lateinit var btnScannerQr: Button
     private lateinit var tvScannedValue: TextView

@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.recibo.R
 import com.example.recibo.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -43,7 +42,7 @@ class SignInActivity : AppCompatActivity() {
             if(sEmailEt.isNotEmpty() && sPasswordEt.isNotEmpty()){
                 firebaseAuth.signInWithEmailAndPassword(sEmailEt, sPasswordEt).addOnCompleteListener{
                     if(it.isSuccessful){
-                        val intent = Intent(this , QrScanner::class.java)
+                        val intent = Intent(this , QrScannerActivity::class.java)
                         startActivity(intent)
                     }else{
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
