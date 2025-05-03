@@ -6,4 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChallengesActivity">
+
+    <TextView
+        android:id="@+id/tvChallenges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="DESAFIOS"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btChallengesReturnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu Principal"
+        app:layout_constraintEnd_toEndOf="@+id/tvChallenges"
+        app:layout_constraintStart_toStartOf="@+id/tvChallenges"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallenges" />
 </androidx.constraintlayout.widget.ConstraintLayout>

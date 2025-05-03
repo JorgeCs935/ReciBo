@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".QrScannerActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".QrScannerActivity">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvQrScanner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="8dp"
-        app:strokeColor="@color/black"
-        app:strokeWidth="0.5dp">
+        android:layout_marginTop="40dp"
+        android:text="Escaner de QR"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/btnScannerQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Escanear QR"
+        app:layout_constraintEnd_toEndOf="@+id/tvQrScanner"
+        app:layout_constraintStart_toStartOf="@+id/tvQrScanner"
+        app:layout_constraintTop_toBottomOf="@+id/tvQrScanner" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnScannerQr"
-                style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:text="@string/btn_qr_scanner" />
+    <TextView
+        android:id="@+id/tvScannedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Valor Escaneado: "
+        app:layout_constraintEnd_toEndOf="@+id/btnScannerQr"
+        app:layout_constraintStart_toStartOf="@+id/btnScannerQr"
+        app:layout_constraintTop_toBottomOf="@+id/btnScannerQr" />
 
-            <TextView
-                android:id="@+id/tvScannedValue"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textColor="@color/black"
-                android:text="Valor Escaneado: "
-                android:layout_marginTop="40dp">
-            </TextView>
-        </LinearLayout>
+    <Button
+        android:id="@+id/btQrScannerReturnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu Principal"
+        app:layout_constraintEnd_toEndOf="@+id/tvScannedValue"
+        app:layout_constraintStart_toStartOf="@+id/tvScannedValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvScannedValue" />
 
-
-
-    </com.google.android.material.card.MaterialCardView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

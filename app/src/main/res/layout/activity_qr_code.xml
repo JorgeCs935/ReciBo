@@ -7,4 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".QrCodeActivity">
 
+    <TextView
+        android:id="@+id/tvQrCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Código Qr Generado"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btQrCodeReturnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu Principal"
+        app:layout_constraintEnd_toEndOf="@+id/tvQrCode"
+        app:layout_constraintStart_toStartOf="@+id/tvQrCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvQrCode" />
+    <Button
+        android:id="@+id/btQrCodeReturnQrMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu de Creacion de Qr"
+        app:layout_constraintEnd_toEndOf="@+id/btQrCodeReturnMainMenu"
+        app:layout_constraintStart_toStartOf="@+id/btQrCodeReturnMainMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btQrCodeReturnMainMenu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

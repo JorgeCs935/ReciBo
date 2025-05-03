@@ -1,5 +1,6 @@
 package com.example.recibo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Button
@@ -8,23 +9,35 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.recibo.databinding.ActivitySignInBinding
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
 
 class QrScannerActivity : AppCompatActivity() {
 
+
+    private lateinit var binding: ActivitySignInBinding
+
     private lateinit var btnScannerQr: Button
     private lateinit var tvScannedValue: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        binding = ActivitySignInBinding.inflate(layoutInflater)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_qr_scanner)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        binding.btQrScannerReturnMainMenu.setOnClickListener{
+            val intent = Intent(this , MainMenuActivity::class.java)
+            startActivity(intent)
         }
 
         btnScannerQr = findViewById(R.id.btnScannerQr)

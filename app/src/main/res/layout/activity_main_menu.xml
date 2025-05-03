@@ -7,53 +7,86 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity">
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/tvMainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Button"
+        android:layout_marginTop="40dp"
+        android:text="Menu Principal"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btStore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        android:text="Ir a la Tienda"
+        app:layout_constraintEnd_toEndOf="@+id/tvMainMenu"
+        app:layout_constraintStart_toStartOf="@+id/tvMainMenu"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainMenu" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btChallenges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        android:layout_marginTop="20dp"
+        android:text="Ir a los Desafios"
+        app:layout_constraintEnd_toEndOf="@+id/btStore"
+        app:layout_constraintStart_toStartOf="@+id/btStore"
+        app:layout_constraintTop_toBottomOf="@+id/btStore" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btQrMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        android:layout_marginTop="20dp"
+        android:text="Ir a Menu para Generar Qr"
+        app:layout_constraintEnd_toEndOf="@+id/btChallenges"
+        app:layout_constraintStart_toStartOf="@+id/btChallenges"
+        app:layout_constraintTop_toBottomOf="@+id/btChallenges" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btQrScanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        android:layout_marginTop="20dp"
+        android:text="Ir al Escaner de Qr"
+        app:layout_constraintEnd_toEndOf="@+id/btQrMenu"
+        app:layout_constraintStart_toStartOf="@+id/btQrMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btQrMenu" />
+
+    <Button
+        android:id="@+id/btTipsAndNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ir a Consejos y Noticias"
+        app:layout_constraintEnd_toEndOf="@+id/btQrScanner"
+        app:layout_constraintStart_toStartOf="@+id/btQrScanner"
+        app:layout_constraintTop_toBottomOf="@+id/btQrScanner" />
+
+    <Button
+        android:id="@+id/btProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ir al Perfil del Usuario"
+        app:layout_constraintEnd_toEndOf="@+id/btTipsAndNews"
+        app:layout_constraintStart_toStartOf="@+id/btTipsAndNews"
+        app:layout_constraintTop_toBottomOf="@+id/btTipsAndNews" />
+
+    <Button
+        android:id="@+id/btMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ir al Mapa"
+        app:layout_constraintEnd_toEndOf="@+id/btProfile"
+        app:layout_constraintStart_toStartOf="@+id/btProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btProfile" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

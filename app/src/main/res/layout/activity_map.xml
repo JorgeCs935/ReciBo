@@ -7,4 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".MapActivity">
 
+    <TextView
+        android:id="@+id/tvMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Mapa"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btMapReturnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu Principal"
+        app:layout_constraintEnd_toEndOf="@+id/tvMap"
+        app:layout_constraintStart_toStartOf="@+id/tvMap"
+        app:layout_constraintTop_toBottomOf="@+id/tvMap" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

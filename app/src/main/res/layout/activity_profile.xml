@@ -7,4 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Perfil del Usuario"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btProfileReturnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Volver al Menu Principal"
+        app:layout_constraintEnd_toEndOf="@+id/tvProfile"
+        app:layout_constraintStart_toStartOf="@+id/tvProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

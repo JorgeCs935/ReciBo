@@ -15,9 +15,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.recibo.R
 import com.example.recibo.databinding.ActivityRegisterBinding
+import com.example.recibo.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity(){
+
+    private lateinit var binding: ActivitySignInBinding
 
     private lateinit var binding:ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -27,6 +30,12 @@ class RegisterActivity : AppCompatActivity(){
         enableEdgeToEdge()
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
+
+        binding.btMapReturnMainMenu.setOnClickListener{
+            val intent = Intent(this , MainMenuActivity::class.java)
+            startActivity(intent)
+        }
+
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
