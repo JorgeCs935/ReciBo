@@ -7,33 +7,32 @@
 - [🛠 Tecnologías](#-tecnologías)
 - [🏗 Estructura del Proyecto](#-estructura-del-proyecto)
 - [⚙️ Instalación](#️-instalación)
-- [👥 Equipo & Contacto](#-equipo--contacto)
-- [🌍 Impacto Ambiental](#-impacto-ambiental)
+
 
 ## 🌱 Sobre el Proyecto
 **Sistema de Devolución y Recompensa (SDR)** que transforma acciones ecológicas en beneficios:
 
-✨ **Características principales**:
-- 🔍 Escaneo inteligente de QR en puntos de reciclaje autorizados
-- 🏆 Sistema de puntuación verificada con blockchain
-- 🎁 Catálogo dinámico de recompensas (descuentos, productos ecológicos)
-- 📊 Dashboard interactivo con métricas de impacto ambiental
-- 🗺️ Mapa colaborativo de puntos de reciclaje
+Es un Sistema de Devolución y Recompensa (SDR) que funciona a través del móvil y premia el comportamiento medioambiental responsable. 
+Los usuarios podrán escanear códigos QR en puntos de reciclaje, contenedores inteligentes o etiquetas de productos.
+Por cada acción de reciclaje verificada (como llevar residuos a centros autorizados), recibirán puntos canjeables.
+
 
 ## 🎯 Propósito
 **Revolucionar la gestión de residuos en Tarija mediante:**
 
-| Objetivo | Impacto | Métrica |
-|----------|---------|---------|
-| Incentivación | Conversión de residuos en recompensas tangibles | +60% participación |
-| Educación | Campañas de concienciación integradas | 30% mejora en hábitos |
-| Mapeo inteligente | Geolocalización de puntos críticos | 50% más cobertura |
+El proyecto busca transformar la manera en que los ciudadanos de Tarija interactúan con sus residuos, convirtiendo el reciclaje en una actividad recompensada, accesible e informada, contribuyendo así a una ciudad más limpia y un futuro más sostenible.
 
 ## 🛠 Tecnologías
-### Mobile (Android)
-![Kotlin](https://img.shields.io/badge/Kotlin-1.9.20-7F52FF?logo=kotlin&logoColor=white)
-![Android Studio](https://img.shields.io/badge/Android_Studio-2023.2.1-3DDC84?logo=android-studio)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-1.5.4-4285F4?logo=jetpack-compose)
+| Tecnología/Framework | Uso |  
+|----------------------|-----|  
+| [Kotlin](https://kotlinlang.org/) | Lenguaje principal para desarrollo Android |  
+| [ZXing](https://github.com/zxing/zxing) | Escaneo de códigos QR/Bar |  
+| [Firebase Auth](https://firebase.google.com/docs/auth) | Autenticación de usuarios (Email/Google/etc.) |  
+| [Firebase Firestore](https://firebase.google.com/docs/firestore) *(opcional)* | Base de datos en la nube (si la usas) |  
+| [Android Jetpack Components](https://developer.android.com/jetpack) | ViewModel, LiveData, Navigation, etc. |  
+| [Glide](https://github.com/bumptech/glide) o [Picasso](https://square.github.io/picasso/) | Carga de imágenes (si aplica) |  
+| [Retrofit](https://square.github.io/retrofit/) *(opcional)* | Consumo de APIs REST | 
+
 
 ```kotlin
 dependencies {
@@ -43,35 +42,69 @@ dependencies {
 }
 ```
 ```
-ReciBo/
-├───mobile/               # Aplicación Android
-│   ├───core/             # Componentes base (utils, themes)
-│   ├───features/         # Funcionalidades modulares
-│   │   ├───scanner/      # Lector QR con validación
-│   │   ├───rewards/      # Gestión de premios
-│   │   └───stats/        # Visualización de impacto
-│   └───build.gradle      # Configuración de dependencias
+qr-points-project/
+├───backend/                  # API Flask
+│   ├───app/
+│   │   ├───models/           # Modelos de base de datos
+│   │   │   ├───qr_code.py
+│   │   │   ├───user.py
+│   │   │   └───eco_partner.py
+│   │   │
+│   │   ├───services/         # Lógica de negocio
+│   │   │   ├───qr_service.py
+│   │   │   ├───auth_service.py
+│   │   │   └───reward_service.py
+│   │   │
+│   │   ├───routes/           # Endpoints
+│   │   │   ├───qr_routes.py
+│   │   │   ├───user_routes.py
+│   │   │   └───partner_routes.py
+│   │   │
+│   │   ├───utils/            # Utilidades
+│   │   │   ├───database.py
+│   │   │   └───crypto.py
+│   │   │
+│   │   └───config.py         # Configuraciones
+│   │
+│   ├───migrations/           # Migraciones de DB
+│   ├───requirements.txt
+│   └───run.py
 │
-├───backend/              # API REST
-│   ├───api/              # Endpoints (FastAPI)
-│   ├───services/         # Lógica de negocio
-│   └───models/           # Base de datos
+├───mobile/                   # App Android
+│   ├───app/
+│   │   ├───data/
+│   │   │   ├───api/          # Conexión API
+│   │   │   │   ├───QRApiService.kt
+│   │   │   │   └───models/   # DTOs
+│   │   │   │
+│   │   │   └───repository/   # Repositorios
+│   │   │
+│   │   ├───ui/
+│   │   │   ├───qr/           # Pantallas QR
+│   │   │   ├───rewards/      # Premios
+│   │   │   └───profile/      # Perfil
+│   │   │
+│   │   └───utils/            # Utilidades
+│   │
+│   ├───build.gradle
+│   └───app/src/main/res/      # Recursos
 │
-└───docs/                 # Documentación técnica
-    ├───architecture/     # Diagramas UML/C4
-    ├───api-spec.yaml     # Especificación OpenAPI 3.0
-    └───user-guides/      # Manuales de usuario
-```
-git clone https://github.com/tu-usuario/ReciBo.git
-cd ReciBo/mobile
+└───docs/                     # Documentación
+    ├───db_schema.md          # Esquema de DB
+    └───api_endpoints.md      # Endpoints
 
-⚙️ Instalación
-Clonar repositorio:
-# Android Studio
-- Abrir proyecto en Android Studio Electric Eel+
-- Sincronizar dependencias Gradle
-Configurar entorno:
-echo 'API_BASE_URL="https://api.recibo.tj"' > local.properties
-Variables de entorno:
-echo 'API_BASE_URL="https://api.recibo.tj"' > local.properties
+```
+
+## ⚙️ Instalación  
+```bash
+git clone [tu-repo]  
+cd [tu-app]  
+npm install  
+npm start
+```
+## Links:
+Linkedin: https://www.linkedin.com/in/eri-colque-706512363/ 
+tiktok:https://www.tiktok.com/@recibo65?_t=ZM-8w20oUVmg8z&_r=1 
+Facebook: https://www.facebook.com/share/18zwreJTu4/ 
+
 
