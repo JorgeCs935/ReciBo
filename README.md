@@ -104,7 +104,9 @@ npm start
 ```
 ## Links:
 Linkedin: https://www.linkedin.com/in/eri-colque-706512363/ 
-tiktok:https://www.tiktok.com/@recibo65?_t=ZM-8w20oUVmg8z&_r=1 
-Facebook: https://www.facebook.com/share/18zwreJTu4/ 
+
+Tiktok:https://www.tiktok.com/@recibo65?_t=ZM-8w20oUVmg8z&_r=1 
+
+Facebook: [https://www.facebook.com/share/18zwreJTu4/ ](https://www.facebook.com/profile.php?id=61575795937149)
 
 
